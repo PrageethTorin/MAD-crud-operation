@@ -22,7 +22,7 @@
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/baseline_done"
+        android:src="@drawable/baseline_done_24"
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/addNoteHeading"
         android:layout_marginEnd="6dp"
@@ -38,6 +38,7 @@
         android:background="@drawable/orange_border"
         android:layout_marginTop="16dp"
         android:maxLines="1"
+        android:fontFamily="@font/poppins"
         />
     <EditText
         android:id="@+id/contendEditText"
@@ -47,8 +48,8 @@
         android:gravity="top"
         android:padding="12dp"
         android:textSize="18sp"
+        android:fontFamily="@font/poppins"
         android:background="@drawable/orange_border"
         android:layout_below="@id/titleEdittext"
-        android:layout_marginTop="12dp"
-        />
+        android:layout_marginTop="12dp" />
 </RelativeLayout>
