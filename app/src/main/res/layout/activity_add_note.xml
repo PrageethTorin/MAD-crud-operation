@@ -16,7 +16,7 @@
         android:layout_marginTop="16dp"
         android:fontFamily="@font/poppins"
         android:text="Add Note"
-        android:textColor="@color/orange"
+        android:textColor="@color/purple"
         android:textSize="24dp" />
     <ImageView
         android:id="@+id/saveButton"
@@ -35,7 +35,7 @@
         android:padding="12dp"
         android:textSize="20sp"
         android:layout_below="@id/addNoteHeading"
-        android:background="@drawable/orange_border"
+        android:background="@drawable/purple_boarder"
         android:layout_marginTop="16dp"
         android:maxLines="1"
         android:fontFamily="@font/poppins"
@@ -49,7 +49,7 @@
         android:padding="12dp"
         android:textSize="18sp"
         android:fontFamily="@font/poppins"
-        android:background="@drawable/orange_border"
+        android:background="@drawable/purple_boarder"
         android:layout_below="@id/titleEdittext"
         android:layout_marginTop="12dp" />
 </RelativeLayout>
