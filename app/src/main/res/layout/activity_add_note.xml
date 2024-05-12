@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/bground"
     android:padding="16dp"
     tools:context=".AddNoteActivity">
 
@@ -14,10 +15,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginTop="16dp"
-        android:fontFamily="@font/poppins"
+        android:fontFamily="sans-serif-medium"
         android:text="Add Note"
-        android:textColor="@color/purple"
-        android:textSize="24dp" />
+        android:alpha="0.7"
+        android:textColor="@color/black"
+        android:textSize="30sp" />
     <ImageView
         android:id="@+id/saveButton"
         android:layout_width="wrap_content"
