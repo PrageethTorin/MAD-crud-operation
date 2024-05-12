@@ -3,6 +3,7 @@ package com.example.mad_lab_4
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.mad_lab_4.databinding.ActivityMainBinding
 
@@ -31,7 +32,25 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                if (!newText.isNullOrEmpty()) {
+                    val filteredNotes = db.getAllNotes().filter { it.title.contains(newText, true) }
+                    notesAdapter.refreshData(filteredNotes)
+                } else {
+                    notesAdapter.refreshData(db.getAllNotes())
+                }
+                return true
+            }
+        })
+
+
     }
+
  // to refresh the data
     override fun onResume() {
         super.onResume()

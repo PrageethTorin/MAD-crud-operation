@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
+    <!-- TextView for "Notes" heading -->
     <TextView
         android:id="@+id/notesHeading"
         android:layout_width="wrap_content"
@@ -19,6 +19,25 @@
         android:textColor="@color/purple"
         android:textSize="24sp"/>
 
+    <!-- SearchView -->
+
+
+    <!--  RecyclerView for notes -->
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="296dp"
+        android:layout_height="64dp"
+        android:layout_below="@id/notesHeading"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="-48dp"
+        android:layout_marginEnd="0dp"
+        android:queryHint="Search notes..."
+        app:iconifiedByDefault="false" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/notesRecyclerView"
         android:layout_width="match_parent"
@@ -28,7 +47,7 @@
 
 
 
-
+    <!--  FloatingActionButton for adding notes -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
