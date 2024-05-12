@@ -5,7 +5,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey"
     tools:context=".MainActivity">
+
+
 
     <!-- TextView for "Notes" heading -->
     <TextView
@@ -13,52 +16,57 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="16dp"
-        android:text="Notes"
+        android:layout_alignParentEnd="true"
         android:layout_marginStart="18dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="21dp"
+        android:text="My Notes"
+        android:fontFamily="sans-serif-medium"
         android:textColor="@color/purple"
-        android:textSize="24sp"/>
+        android:textSize="24sp" />
+
+
+
+
 
     <!-- SearchView -->
-
-
-    <!--  RecyclerView for notes -->
-
     <SearchView
         android:id="@+id/searchView"
-        android:layout_width="296dp"
-        android:layout_height="64dp"
+        android:layout_width="321dp"
+        android:layout_height="59dp"
         android:layout_below="@id/notesHeading"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginHorizontal="16dp"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="-48dp"
-        android:layout_marginEnd="0dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="77dp"
         android:queryHint="Search notes..."
         app:iconifiedByDefault="false" />
 
+    <!--  RecyclerView for notes -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/notesRecyclerView"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="50dp"
+        android:layout_height="622dp"
+        android:layout_below="@+id/searchView"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="-1dp"
+        android:layout_marginBottom="29dp"
         android:padding="16dp" />
-
-
-
     <!--  FloatingActionButton for adding notes -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/addButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="339dp"
         android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="@color/purple"
         android:src="@drawable/baseline_add_24"
-        app:tint="@color/white"
-        android:backgroundTint="@color/purple" />
+        app:tint="@color/white" />
     </RelativeLayout>
